@@ -84,34 +84,12 @@ combinations that reflect the ways in which the system will be used._
 
 ```python
 # EXAMPLE
-
-"""
-Given a library
-When we add two tracks
-We see those tracks reflected in the tracks list
-"""
-library = MusicLibrary()
-track_1 = Track("Carte Blanche", "Veracocha")
-track_2 = Track("Synaesthesia", "The Thrillseekers")
-library.add(track_1)
-library.add(track_2)
-library.tracks # => [track_1, track_2]
 ```
 
 ## 4. Create Examples as Unit Tests
 
 _Create examples, where appropriate, of the behaviour of each relevant class at
 a more granular level of detail._
-
-```python
-# EXAMPLE
-
-"""
-Given a track with a title and an artist
-We see the title reflected in the title property
-"""
-track = Track("Carte Blanche", "Veracocha")
-track.title # => "Carte Blanche"
 ```
 
 _Encode each example as a test. You can add to the above list as you go._
