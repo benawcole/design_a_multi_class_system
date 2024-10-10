@@ -44,3 +44,10 @@ def test_todo():
     assert diary3.todo(list1) == ["Feed the cat", "Pay the bills", "Clean your room"]
     list1.mark_done("Feed the cat")
     assert diary3.todo(list1) == ["Pay the bills", "Clean your room"]
+
+def test_list_mobiles():
+    diary4 = Diary()
+    diary4.add("Nov 1", "Some weird dude gave me this number: 09898 989898")
+    assert diary4.list_mobiles("Nov 1") == "09898 989898"
+    diary4.add("Nov 2", "Some weird dude gave me any number")
+    assert diary4.list_mobiles("Nov 2") == "No numbers found"

@@ -26,5 +26,13 @@ class Diary:
     def todo(self, lst):
         return lst.incomplete()
     
-    def list_mobiles(self, title=None):
-        pass
+    def list_mobiles(self, title):
+        # Phone number format: 00000 000 000 OR 00000 000000 OR 00000000000
+        # iterate through every char
+        # CONTENT = SELF.ENTRIES[TITLE]
+        i = 0
+        while i < len(self.entries[title]):
+            if "".join(self.entries[title].split())[i:i+11].isdigit():
+                return "".join(self.entries[title].split())[i:i+5] + " " + "".join(self.entries[title].split())[i+5:i+11]
+            i += 1
+        return "No numbers found"
