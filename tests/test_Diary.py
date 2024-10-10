@@ -48,6 +48,8 @@ def test_todo():
 def test_list_mobiles():
     diary4 = Diary()
     diary4.add("Nov 1", "Some weird dude gave me this number: 09898 989898")
+    diary4.add("Nov 2", "Some other weird dude gave me this number: 00800382991")
     assert diary4.list_mobiles("Nov 1") == "09898 989898"
-    diary4.add("Nov 2", "Some weird dude gave me any number")
-    assert diary4.list_mobiles("Nov 2") == "No numbers found"
+    assert diary4.list_mobiles("Nov 2") == "00800 382991"
+    diary4.add("Nov 3", "Some weird dude gave me any number")
+    assert diary4.list_mobiles("Nov 3") == "No numbers found"
